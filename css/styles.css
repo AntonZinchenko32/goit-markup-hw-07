@@ -64,7 +64,7 @@ h1, h2, h3, p {
   margin: 0;
   list-style: none;
 }
-.address-header-list .link {
+.header__contacts .link {
   fill:var(--text-color-02);
   color: var(--text-color-02);
 }
@@ -151,26 +151,25 @@ img {
   background-color: var(--brand-color-01);
 }
 .nav__list,
-.address-header-list {
+.header__contacts {
   display: flex;
   letter-spacing: 0.02em;
 }
 .nav__list li:not(:last-child), 
-.address-header-list li:not(:last-child) {
+.header__contacts li:not(:last-child) {
   margin-right: 50px;
 }
-.address-header-list {
+.header__contacts {
   color: var(--text-color-02);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
 }
-.mail-link, 
-.tel-link {
+.header__item {
   display: flex;
   align-items: center;
 }
-.icon-link-envelope, .icon-link-smartphone {
+.header__icon {
   margin-right: 10px;
 }
 
@@ -399,7 +398,7 @@ img {
 .footer__container {
   display: flex;
 }
-.contacts {
+.footer__contacts {
   margin-right: auto;
 }
 .logo__part--white {
