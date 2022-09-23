@@ -129,18 +129,23 @@ img {
   margin-right: auto;
 }
 .nav__list {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
 }
-.nav__item {
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+.nav__link {
   display: block;
   padding: 32px 0;
 }
-.nav__item--active {
+.nav__link--active {
   position: relative;
 }
-.nav__item--active::after {
+.nav__link--active::after {
   content:'';
   display: block;
   position: absolute;
@@ -150,22 +155,18 @@ img {
   border-radius: 2px;
   background-color: var(--brand-color-01);
 }
-.nav__list,
 .header__contacts {
   display: flex;
-  letter-spacing: 0.02em;
-}
-.nav__list li:not(:last-child), 
-.header__contacts li:not(:last-child) {
-  margin-right: 50px;
-}
-.header__contacts {
   color: var(--text-color-02);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
+  letter-spacing: 0.02em;
 }
-.header__item {
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+.contacts__link {
   display: flex;
   align-items: center;
 }
@@ -189,7 +190,7 @@ img {
   padding-top: 200px;
   padding-bottom: 200px;
 }
-.slogan {
+.hero__slogan {
   width: 604px;
   text-align: center;
   margin-left: auto;
@@ -200,8 +201,9 @@ img {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
+  letter-spacing: 0.06em;
 }
-.hero .button {
+.hero__button {
   display: block;
   margin: 0 auto;
   padding: 10px 32px;
@@ -213,24 +215,20 @@ img {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.88;
+  letter-spacing: 0.06em;
   cursor: pointer;
 }
-.slogan, 
-.hero .button {
-  letter-spacing: 0.06em;
-}
-
 /* Преимущества */
 .benefits {
   font-size: 14px;
 }
-.benefits-list {
+.benefits__list {
   display: flex;
 }
-.benefits-list li:not(:last-child) {
+.benefits__item:not(:last-child) {
   margin-right: 30px;
 }
-.benefits-list-item::before {
+.benefits__item::before {
   content:'';
   display: block;
   margin-bottom: 30px;
@@ -240,26 +238,26 @@ img {
   background-repeat: no-repeat;
   background-position: center;
 }
-.icon-antenna::before {
+.benefits__icon--antenna::before {
   background-image: url(../images/benefits-icon-antenna.svg);
 }
-.icon-clock::before {
+.benefits__icon--clock::before {
   background-image: url(../images/benefits-icon-clock.svg);
 }
-.icon-diagram::before {
+.benefits__icon--diagram::before {
   background-image: url(../images/benefits-icon-diagram.svg);
 }
-.icon-astronaut::before {
+.benefits__icon--astronaut::before {
   background-image: url(../images/benefits-icon-astronaut.svg);
 }
-.benefits-subtitle {
+.benefits__subtitle {
   margin-bottom: 10px;
   font-size: inherit;
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
 }
-.benefits-text {
+.benefits__text {
   color: var(--text-color-02);
   line-height: 1.71;
 }
@@ -722,7 +720,7 @@ img {
   color: var(--brand-color-01);
   fill:var(--brand-color-01);
 }
-.nav__item--active {
+.nav__link--active {
   color: var(--brand-color-01);
 }
 .button:hover,
