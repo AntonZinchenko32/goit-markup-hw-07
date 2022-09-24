@@ -591,7 +591,7 @@ img {
 
   transition: transform 250ms linear;
 }
-.modal-button-close {
+.modal__close-button {
   position: absolute;
   right: 8px;
   top: 8px;
@@ -606,20 +606,20 @@ img {
   border-radius: 50%;
   cursor: pointer;
 }
-.modal-form b {
+.form__title {
   display: block;
   margin-bottom: 12px;
   text-align: center;
   line-height: 1.05;
   font-size: 20px;
 }
-.modal-form-list {
+.form__list {
   margin-bottom: 20px;
 }
-.modal-form-list li:not(:last-child) {
+.form__field:not(:last-child) {
   margin-bottom: 10px;
 }
-.modal-form-list li {
+.form__field {
   display: flex;
   flex-direction: column;
   line-height: 1.17;
@@ -627,42 +627,40 @@ img {
   letter-spacing: 0.01em;
   color:var(--text-color-02);
 }
-.modal-form-list li label {
+.form__label {
   margin-bottom: 4px;
 }
-.form-field input,
-.form-field-textarea textarea {
+.form__input {
   width: 100%;
   border: 1px solid var(--input-border-color-02);
   border-radius: 4px;
   padding: 11px 12px 11px 42px;
   font-size: 14px;
+  outline: none;
 }
-.input-box {
+.form__box {
   position: relative;
 }
-.input-icon {
+.form__icon {
   position: absolute;
   top: 11px;
   bottom: 11px;
   left: 12px;
   pointer-events: none;
 }
-.form-field-textarea textarea {
+.form__input--textarea {
   padding: 12px 16px;
   line-height: 1.17;
-}
-.textarea-comment {
   width: 100%;
   resize: none;
 }
-.textarea-comment::placeholder {
+.form__input--textarea::placeholder {
   color: var(--text-color-04);
   line-height: 1.17;
   font-size: 12px;
   letter-spacing: 0.01em;
 }
-.checkbox-label {
+.form__checkbox-label {
   display:flex;
   justify-content: center;
   align-items: center;
@@ -671,7 +669,7 @@ img {
   font-size: 14px;
   color:var(--text-color-02);
 }
-.checkbox {
+.form__checkbox {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -681,7 +679,7 @@ img {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-.custom-checkbox {
+.form__custom-checkbox {
   display: inline-flex;
   justify-content: center;
   align-items: center;
@@ -693,16 +691,16 @@ img {
   border:2px solid var(--text-color-01);
   fill:var(--background-color-01);
 }
-.checkbox-icon {
+.form__checkbox-icon {
   visibility: hidden;
   opacity: 0;
   pointer-events: none;
 }
-.terms-link {
+.form__terms-link {
   text-decoration: underline;
   color: var(--brand-color-01);
 }
-.modal-submit-button {
+.form__submit-button {
   display: block;
   margin: 0 auto;
   padding: 10px 55px 10px 56px;
@@ -757,35 +755,29 @@ img {
 .gallery__link:focus .overlay{
   transform: translateY(0);
 }
-.modal-button-close:hover,
-.modal-button-close:focus {
+.modal__close-button:hover,
+.modal__close-button:focus {
   fill:var(--brand-color-01);
 }
-.input-box input:focus,
-.textarea-comment:focus {
+.form__input:focus {
   border-color: var(--brand-color-01);
 }
-.input-box input,
-.textarea-comment {
-  outline: none;
-}
-.input-box input:focus + .input-icon
-{
+.form__input:focus + .form__icon {
   border-color: var(--brand-color-01);
   fill:var(--brand-color-01);
 }
-.checkbox:focus + .custom-checkbox { 
+.form__checkbox:focus + .form__custom-checkbox { 
   border-color: var(--brand-color-01); 
 }
-.checkbox:checked + .custom-checkbox {
+.form__checkbox:checked + .form__custom-checkbox {
   background-color: var(--brand-color-01);
   border-color: var(--brand-color-01);
 }
-.checkbox:checked + .custom-checkbox .checkbox-icon {
+.form__checkbox:checked + .form__custom-checkbox .form__checkbox-icon {
   visibility: visible;
   opacity: 1;
 }
-.terms-link:hover {
+.form__terms-link:hover {
   text-decoration: none;
 }
 
@@ -793,7 +785,7 @@ img {
 .link,
 .button,
 .input,
-.input-icon
+.form__icon
 {
   transition-property: 
   color, fill, background-color, border-color, box-shadow;
