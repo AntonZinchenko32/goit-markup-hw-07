@@ -1,6 +1,21 @@
-body {
-    background-color: tomato;
-}
-body {
-    background-color: tomato;
-}
+// Змінні
+@import 'utils/vars';
+
+// Приховує заголовки
+@import 'utils/visually-hidden';
+
+// Налаштування body та скидання
+@import 'components/base';
+@import 'components/reset';
+
+// Всі компоненти сторінки, по черзі
+@import 'components/layouts/header';
+@import 'components/layouts/hero';
+@import 'components/layouts/benefits';
+@import 'components/layouts/desc';
+@import 'components/layouts/team';
+@import 'components/layouts/clients';
+@import 'components/layouts/footer';
+@import 'components/layouts/subs-form';
+//@import 'components/layouts/team';
+//@import 'components/layouts/clients';

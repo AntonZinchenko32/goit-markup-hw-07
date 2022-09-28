@@ -324,13 +324,13 @@
             </li>
           </ul>
         </div>
-        <form class="send-form">
-          <label class="send-form__label" for="email">подпишитесь на рассылку</label>
-          <input class="input send-form__input" type="email" name="email" id="email" placeholder="E-mail">
-          <button class="button send-form__button" type="submit">
+        <form class="subs-form">
+          <label class="subs-form__label" for="email">подпишитесь на рассылку</label>
+          <input class="input subs-form__input" type="email" name="email" id="email" placeholder="E-mail">
+          <button class="button subs-form__button" type="submit">
             <b class="button__label">Подписаться</b>
             <svg class="button__icon" width="20px" height="20px">
-              <use href="./images/icons.svg#icon-send"></use>
+              <use href="./images/icons.svg#icon-subs"></use>
             </svg>
           </button>
         </form>
@@ -342,52 +342,52 @@
         <button class="modal__close-button" data-modal-close>
           <svg class="close-button-icon" width="18px" height="18px"><use href="./images/symbol-defs.svg#modal-button-close"></use></svg>
         </button>
-        <form class="form">
-          <b class="form__title">Оставте свои данные, мы вам перезвоним</b>
-          <ul class="list form__list">
-            <li class="form__field">
-              <label class="form__label" for="name">Имя</label>
-              <div class="form__box">
-                <input class="input form__input" type="text" name="name" id="name">
-                <svg class="form__icon" width="18" height="18">
+        <form class="send-form">
+          <b class="send-form__title">Оставте свои данные, мы вам перезвоним</b>
+          <ul class="list send-form__list">
+            <li class="send-form__field">
+              <label class="send-form__label" for="name">Имя</label>
+              <div class="send-form__box">
+                <input class="input send-form__input" type="text" name="name" id="name">
+                <svg class="send-form__icon" width="18" height="18">
                   <use href="./images/icons.svg#icon-person-black"></use>
                 </svg>
               </div>
             </li>
-            <li class="form__field">
-              <label class="form__label" for="tel">Телефон</label>
-              <div class="form__box">
-                <input class="input form__input" type="tel" name="tel" id="tel">
-                <svg class="form__icon" width="18" height="18">
+            <li class="send-form__field">
+              <label class="send-form__label" for="tel">Телефон</label>
+              <div class="send-form__box">
+                <input class="input send-form__input" type="tel" name="tel" id="tel">
+                <svg class="send-form__icon" width="18" height="18">
                   <use href="./images/icons.svg#icon-phone-black"></use>
                 </svg>
               </div>
             </li>
-            <li class="form__field">
-              <label class="form__label" for="mail">Почта</label>
-              <div class="form__box">
-                <input class="input form__input" type="email" name="mail" id="mail">
-                <svg class="form__icon" width="18" height="18">
+            <li class="send-form__field">
+              <label class="send-form__label" for="mail">Почта</label>
+              <div class="send-form__box">
+                <input class="input send-form__input" type="email" name="mail" id="mail">
+                <svg class="send-form__icon" width="18" height="18">
                   <use href="./images/icons.svg#icon-email-black"></use>
                 </svg>
               </div>
             </li>
-            <li class="form__field">
-              <label class="form__label" for="comment">Комментарий</label>
-              <textarea class="input form__input form__input--textarea" name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
+            <li class="send-form__field">
+              <label class="send-form__label" for="comment">Комментарий</label>
+              <textarea class="input send-form__input send-form__input--textarea" name="comment" id="comment" rows="6" placeholder="Введите текст"></textarea>
             </li>
           </ul>
-          <label class="form__checkbox-label">
-            <input class="form__checkbox" type="checkbox" name="terms">
-            <span class="form__custom-checkbox">
-              <svg class="form__checkbox-icon" width="16px" height="15px">
+          <label class="send-form__checkbox-label">
+            <input class="send-form__checkbox" type="checkbox" name="terms">
+            <span class="send-form__custom-checkbox">
+              <svg class="send-form__checkbox-icon" width="16px" height="15px">
                 <use href="./images/icons.svg#icon-check-mark"></use>
               </svg>
             </span>
             Соглашаюсь с рассылкой и принимаю&nbsp;
-            <a href="" class="link form__terms-link">Условия договора</a>
+            <a href="" class="link send-form__terms-link">Условия договора</a>
           </label>
-          <button class="button form__submit-button" type="submit">Отправить</button>
+          <button class="button send-form__submit-button" type="submit">Отправить</button>
         </form>
       </div>
     </div>

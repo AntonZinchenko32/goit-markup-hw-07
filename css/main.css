@@ -1,7 +1,609 @@
-body {
-  background-color: tomato;
+@charset "UTF-8";
+:root {
+  --background-color-01: #ffffff;
+  --background-color-02: #f5f4fa;
+  --text-color-01: #212121;
+  --text-color-02:#757575;
+  --text-color-03:rgba(255, 255, 255, 0.6);
+  --text-color-04: rgba(117, 117, 117, 0.5);
+  --brand-color-01: #2196f3;
+  --brand-color-02: #2f303a;
+  --button-color:#f5f4fa;
+  --highlight-button-color: #188ce8;
+  --border-color-01:#ECECEC;
+  --border-color-02:#EEEEEE;
+  --shadow-color-01: rgba(0, 0, 0, 0.12);
+  --shadow-color-02:rgba(0, 0, 0, 0.14);
+  --shadow-color-03:rgba(0, 0, 0, 0.2);
+  --shadow-color-04: rgba(0, 0, 0, 0.06);
+  --shadow-color-05: rgba(0, 0, 0, 0.16);
+  --shadow-color-06: rgba(0, 0, 0, 0.1);
+  --shadow-color-07: rgba(0, 0, 0, 0.08);
+  --shadow-color-08: rgba(0, 0, 0, 0.15);
+  --gradient-color-01: rgba(47, 48, 58, 0.4);
+  --gradient-color-02: rgba(47, 48, 58, 0.4);
+  --icon-color-01: #AFB1B8;
+  --icon-color-02: rgba(255, 255, 255, 0.1);
+  --label-color: rgba(47, 48, 58, 0.8);
+  --overlay-color: rgba(33, 150, 243, 0.9);
+  --input-background-color: #2196F300;
+  --input-border-color-01: rgba(255, 255, 255, 0.3);
+  --input-border-color-02: rgba(33, 33, 33, 0.2);
 }
 
+/* Приховує заголовки */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  -webkit-clip-path: inset(100%);
+          clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+/* *****Styling body***** */
 body {
-  background-color: tomato;
+  background-color: var(--background-color-01);
+  font-family: "Roboto", sans-serif;
+  color: var(--text-color-01);
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+
+/* Контейнер */
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+/* Секції */
+.section {
+  padding: 94px 0 94px;
+}
+
+h1, h2, h3, p {
+  margin: 0;
+}
+
+.link {
+  text-decoration: none;
+  color: var(--text-color-01);
+}
+
+.list {
+  padding-left: 0px;
+  margin: 0;
+  list-style: none;
+}
+
+.header__contacts .link {
+  fill: var(--text-color-02);
+  color: var(--text-color-02);
+}
+
+/* *****Change font-style in address section to normal***** */
+.address__list {
+  font-style: normal;
+}
+
+/* Форматирование изображений */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.header {
+  border-bottom: 1px solid var(--border-color-01);
+}
+
+.header__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  margin-right: 93px;
+}
+
+.logo {
+  color: var(--brand-color-01);
+  font-family: "Raleway", sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.19;
+}
+
+.logo__part--black {
+  color: var(--text-color-01);
+}
+
+.nav {
+  margin-right: auto;
+}
+
+.nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.nav__link {
+  display: block;
+  padding: 32px 0;
+}
+
+.nav__link--active {
+  position: relative;
+}
+
+.nav__link--active::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: -1px;
+  width: 100%;
+  height: 4px;
+  border-radius: 2px;
+  background-color: var(--brand-color-01);
+}
+
+.header__contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  color: var(--text-color-02);
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+
+.contacts__item:not(:last-child) {
+  margin-right: 50px;
+}
+
+.contacts__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__icon {
+  margin-right: 10px;
+}
+
+.hero {
+  max-width: 1600px;
+  margin: 0 auto;
+  background-color: var(--brand-color-02);
+  background-image: -webkit-gradient(linear, left top, right top, from(var(--gradient-color-01)), to(var(--gradient-color-02))), url(../images/hero-img-team.jpg);
+  background-image: linear-gradient(to right, var(--gradient-color-01), var(--gradient-color-02)), url(../images/hero-img-team.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
+}
+
+.hero__slogan {
+  width: 604px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+  color: var(--background-color-01);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  letter-spacing: 0.06em;
+}
+
+.hero__button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 32px;
+  border-radius: 4px;
+  background-color: var(--brand-color-01);
+  border-style: none;
+  color: var(--background-color-01);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+  cursor: pointer;
+}
+
+.benefits {
+  font-size: 14px;
+}
+
+.benefits__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.benefits__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.benefits__item::before {
+  content: "";
+  display: block;
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--background-color-02);
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.benefits__icon--antenna::before {
+  background-image: url(../images/benefits-icon-antenna.svg);
+}
+
+.benefits__icon--clock::before {
+  background-image: url(../images/benefits-icon-clock.svg);
+}
+
+.benefits__icon--diagram::before {
+  background-image: url(../images/benefits-icon-diagram.svg);
+}
+
+.benefits__icon--astronaut::before {
+  background-image: url(../images/benefits-icon-astronaut.svg);
+}
+
+.benefits__subtitle {
+  margin-bottom: 10px;
+  font-size: inherit;
+  font-weight: 700;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.benefits__text {
+  color: var(--text-color-02);
+  line-height: 1.71;
+}
+
+.desc {
+  padding-bottom: 94px;
+}
+
+.desc__title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.desc__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.desc__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.desc__thumb {
+  position: relative;
+}
+
+.desc__label {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 27px 0 27px;
+  text-align: center;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 1.14;
+  font-weight: 700;
+  color: var(--background-color-01);
+  background-color: var(--label-color);
+}
+
+.team {
+  background-color: var(--background-color-02);
+}
+
+.team__title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.team__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.19;
+  font-size: 16px;
+}
+
+.team__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team__item {
+  border-radius: 0px 0px 4px 4px;
+  -webkit-box-shadow: 0px 1px 3px var(--shadow-color-01), 0px 1px 1px var(--shadow-color-02), 0px 2px 1px var(--shadow-color-03);
+          box-shadow: 0px 1px 3px var(--shadow-color-01), 0px 1px 1px var(--shadow-color-02), 0px 2px 1px var(--shadow-color-03);
+  background-color: var(--background-color-01);
+}
+
+.team__text {
+  padding: 30px 0px 16px;
+  text-align: center;
+}
+
+.team__subtitle {
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: inherit;
+}
+
+.team__desc {
+  color: var(--text-color-02);
+}
+
+.team__social-network {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 30px;
+}
+
+.social-network__item:not(:last-child) {
+  margin-right: 10px;
+}
+
+.social-network__link {
+  color: var(--icon-color-01);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+
+.social-network__icon {
+  fill: currentColor;
+}
+
+.clients__title {
+  margin-bottom: 50px;
+  text-align: center;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+}
+
+.clients__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.clients__item {
+  -ms-flex-preferred-size: calc((100% - 150px) / 6);
+      flex-basis: calc((100% - 150px) / 6);
+}
+
+.clients__item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients__link {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 92px;
+  border: 1px solid var(--icon-color-01);
+  border-radius: 4px;
+  color: var(--icon-color-01);
+}
+
+.clients__icon {
+  fill: currentColor;
+}
+
+.footer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--brand-color-02);
+}
+
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__contacts {
+  margin-right: auto;
+}
+
+.logo__part--white {
+  color: var(--background-color-01);
+}
+
+.address {
+  margin-top: 20px;
+}
+
+.address__list {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+
+.address__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.address__link {
+  color: var(--background-color-01);
+}
+
+.address__link--mail,
+.address__link--tel {
+  color: var(--text-color-03);
+}
+
+.footer__social-network {
+  margin-right: auto;
+}
+
+.social-network__title {
+  display: inline-block;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  color: var(--background-color-01);
+  font-size: 14px;
+  line-height: 1.14;
+}
+
+.social-network__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.social-network__link--footer {
+  background-color: var(--icon-color-02);
+}
+
+.social-network__icon--footer {
+  fill: var(--background-color-01);
+}
+
+/* Форма подписки на рассылку */
+.subs-form__label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 12px;
+  margin-bottom: 20px;
+  color: var(--background-color-01);
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+}
+
+.subs-form__input {
+  width: 358px;
+  margin-right: 12px;
+  border-radius: 4px;
+  background: var(--input-background-color);
+  border: 1px solid var(--input-border-color-01);
+  -webkit-filter: drop-shadow(0px 4px 4px var(--shadow-color-08));
+          filter: drop-shadow(0px 4px 4px var(--shadow-color-08));
+  padding: 15px 16px;
+  color: var(--background-color-01);
+}
+
+.subs-form__input::-webkit-input-placeholder {
+  color: var(--text-color-03);
+  line-height: 1.25;
+}
+
+.subs-form__input::-moz-placeholder {
+  color: var(--text-color-03);
+  line-height: 1.25;
+}
+
+.subs-form__input:-ms-input-placeholder {
+  color: var(--text-color-03);
+  line-height: 1.25;
+}
+
+.subs-form__input::-ms-input-placeholder {
+  color: var(--text-color-03);
+  line-height: 1.25;
+}
+
+.subs-form__input::placeholder {
+  color: var(--text-color-03);
+  line-height: 1.25;
+}
+
+.subs-form__button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 28px 10px 29px;
+  border-radius: 4px;
+  background-color: var(--brand-color-01);
+  border-style: none;
+  cursor: pointer;
+  -webkit-box-shadow: 0px 4px 4px var(--shadow-color-08);
+          box-shadow: 0px 4px 4px var(--shadow-color-08);
+}
+
+.button__label {
+  margin-right: 10px;
+  color: var(--background-color-01);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.06em;
+}
+
+.button__icon {
+  fill: var(--background-color-01);
 }/*# sourceMappingURL=main.css.map */
