@@ -1,3 +1,4 @@
+
 .team {
     background-color: var(--background-color-02);
   }
@@ -40,24 +41,11 @@
     justify-content: center;
     margin-bottom: 30px;
   }
-  .social-network__item:not(:last-child) {
-    margin-right: 10px;
-  }
   .social-network__link {
-    color: var(--icon-color-01);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    
     &:hover {
-      background-color: var(--brand-color-01);
       color:var(--background-color-01);
     }
   }
-
   .social-network__icon {
     fill: currentColor;
   }

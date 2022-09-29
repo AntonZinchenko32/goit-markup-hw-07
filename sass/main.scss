@@ -5,11 +5,13 @@
 @import 'utils/visually-hidden';
 
 // Налаштування body та reset
-@import 'components/base';
 @import 'components/reset';
+@import 'components/base';
 
 // Всі компоненти сторінки, по черзі
 @import 'components/layouts/header';
+@import 'components/layouts/logo';
+@import 'components/layouts/nav';
 @import 'components/layouts/hero';
 @import 'components/layouts/benefits';
 @import 'components/layouts/desc';
@@ -17,6 +19,9 @@
 @import 'components/layouts/clients';
 @import 'components/layouts/footer';
 @import 'components/layouts/subs-form';
+
+// Соціальні мережі
+@import 'components/layouts/social-network';
 
 // Галерея-Сетка Карточек
 @import 'components/layouts/filters';
