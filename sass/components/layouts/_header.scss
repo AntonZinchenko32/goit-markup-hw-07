@@ -37,6 +37,7 @@
   }
   .nav__link--active {
     position: relative;
+    color: var(--brand-color-01);
   }
   .nav__link--active::after {
     content:'';
@@ -62,6 +63,8 @@
   .contacts__link {
     display: flex;
     align-items: center;
+    color: var(--text-color-02);
+    fill:var(--text-color-02);
   }
   .header__icon {
     margin-right: 10px;

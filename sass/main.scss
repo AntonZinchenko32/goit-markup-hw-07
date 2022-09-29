@@ -4,7 +4,7 @@
 // Приховує заголовки
 @import 'utils/visually-hidden';
 
-// Налаштування body та скидання
+// Налаштування body та reset
 @import 'components/base';
 @import 'components/reset';
 
@@ -17,5 +17,13 @@
 @import 'components/layouts/clients';
 @import 'components/layouts/footer';
 @import 'components/layouts/subs-form';
-//@import 'components/layouts/team';
-//@import 'components/layouts/clients';
+
+// Галерея-Сетка Карточек
+@import 'components/layouts/filters';
+@import 'components/layouts/card-set';
+@import 'components/layouts/overlay';
+
+// Модальное окно с формой отправки
+@import 'components/layouts/backdrop';
+@import 'components/layouts/modal-window';
+@import 'components/layouts/send-form';
