@@ -8,10 +8,9 @@
   .send-form__list {
     margin-bottom: 20px;
   }
-  .send-form__field:not(:last-child) {
-    margin-bottom: 10px;
-  }
   .send-form__field {
+    @include bottom-indent (10px);
+
     display: flex;
     flex-direction: column;
     line-height: 1.17;
@@ -30,7 +29,7 @@
     font-size: 14px;
     outline: none;
 
-    &:focus {
+    &:focus, &:hover {
       border-color: var(--brand-color-01);
     }
   }
@@ -44,7 +43,8 @@
     left: 12px;
     pointer-events: none;
 
-    .send-form__input:focus + & {
+    .send-form__input:focus + &,
+    .send-form__input:hover + & {
       fill:var(--brand-color-01);
     }
   }
@@ -53,12 +53,13 @@
     line-height: 1.17;
     width: 100%;
     resize: none;
-  }
-  .send-form__input--textarea::placeholder {
-    color: var(--text-color-04);
-    line-height: 1.17;
-    font-size: 12px;
-    letter-spacing: 0.01em;
+
+    &::placeholder {
+      color: var(--text-color-04);
+      line-height: 1.17;
+      font-size: 12px;
+      letter-spacing: 0.01em;
+    }
   }
   .send-form__checkbox-label {
     display:flex;
@@ -104,6 +105,7 @@
     opacity: 0;
     pointer-events: none;
 
+    // З'являється кастомна іконка у checkbox
     .send-form__checkbox:checked + .send-form__custom-checkbox & {
       visibility: visible;
       opacity: 1;

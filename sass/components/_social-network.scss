@@ -1,6 +1,6 @@
 
-.social-network__item:not(:last-child) {
-    margin-right: 10px;
+.social-network__item {
+  @include right-indent (10px);
   }
   .social-network__link {
     color: var(--icon-color-01);
@@ -11,7 +11,7 @@
     height: 44px;
     border-radius: 50%;
     
-    &:hover {
+    &:hover, &:focus {
       background-color: var(--brand-color-01);
     }
   }

@@ -14,9 +14,8 @@
     transform: translateY(200%);
     transition: transform 400ms ease;
     
-    .gallery__link:hover & {
-      transform: translateY(0);
-    }
+    // Виїзджає overlay при hover та focus по gallery__link
+    .gallery__link:hover &, 
     .gallery__link:focus & {
       transform: translateY(0);
     }

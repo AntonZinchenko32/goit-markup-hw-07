@@ -7,6 +7,7 @@
   }
   .header__logo {
     margin-right: 93px;
+    padding: 24px 0;
   }
   .header__contacts {
     display: flex;
@@ -16,12 +17,13 @@
     line-height: 1.14;
     letter-spacing: 0.02em;
   }
-  .contacts__item:not(:last-child) {
-    margin-right: 50px;
+  .contacts__item {
+    @include right-indent(50px);
   }
   .contacts__link {
     display: flex;
     align-items: center;
+    padding: 32px 0;
     color: var(--text-color-02);
     fill:var(--text-color-02);
   }

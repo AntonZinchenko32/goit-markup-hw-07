@@ -11,9 +11,8 @@
   }
   .clients__item {
     flex-basis: calc((100% - 5 * 30px) / 6);
-  }
-  .clients__item:not(:last-child) {
-    margin-right: 30px;
+    
+    @include right-indent (30px);
   }
   .clients__link {
     display: flex;
@@ -24,7 +23,7 @@
     border-radius: 4px;
     color:var(--icon-color-01);
     
-    &:hover {
+    &:hover, &:focus {
       border-color: var(--brand-color-01);
     }
   }

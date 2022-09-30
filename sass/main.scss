@@ -1,34 +1,40 @@
+// Нормалізатор стилів
+@import 'utils/modern-normalize';
+
 // Змінні
 @import 'utils/vars';
+
+// mixins
+@import 'utils/mixins';
 
 // Приховує заголовки
 @import 'utils/visually-hidden';
 
 // Налаштування body та reset
-@import 'components/reset';
-@import 'components/base';
+@import 'base/reset';
+@import 'base/base';
 
 // Всі компоненти сторінки, по черзі
-@import 'components/layouts/header';
-@import 'components/layouts/logo';
-@import 'components/layouts/nav';
-@import 'components/layouts/hero';
-@import 'components/layouts/benefits';
-@import 'components/layouts/desc';
-@import 'components/layouts/team';
-@import 'components/layouts/clients';
-@import 'components/layouts/footer';
-@import 'components/layouts/subs-form';
+@import 'layouts/header';
+@import 'components/logo';
+@import 'components/nav';
+@import 'layouts/hero';
+@import 'layouts/benefits';
+@import 'layouts/desc';
+@import 'layouts/team';
+@import 'layouts/clients';
+@import 'layouts/footer';
+@import 'components/subs-form';
 
 // Соціальні мережі
-@import 'components/layouts/social-network';
+@import 'components/social-network';
 
 // Галерея-Сетка Карточек
-@import 'components/layouts/filters';
-@import 'components/layouts/card-set';
-@import 'components/layouts/overlay';
+@import 'components/filters';
+@import 'components/card-set';
+@import 'components/overlay';
 
 // Модальное окно с формой отправки
-@import 'components/layouts/backdrop';
-@import 'components/layouts/modal-window';
-@import 'components/layouts/send-form';
+@import 'components/backdrop';
+@import 'components/modal-window';
+@import 'components/send-form';

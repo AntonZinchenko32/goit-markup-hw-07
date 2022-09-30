@@ -11,8 +11,8 @@
   .desc__list {
     display: flex;
   }
-  .desc__item:not(:last-child) {
-    margin-right: 30px;
+  .desc__item {
+    @include right-indent (30px);
   }
   .desc__thumb {
     position:relative;
